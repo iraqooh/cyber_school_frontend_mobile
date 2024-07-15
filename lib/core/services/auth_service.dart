@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,16 +8,19 @@ class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  // login
+  // Stream to listen to authentication state changes
+  Stream<User?> get authStateChanges => _auth.authStateChanges();
+
+  // Sign in with Google
   Future<User?> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      if (googleUser == null) return null; // user cancelled sign-in
+      if (googleUser == null) return null; // User cancelled sign-in
 
       final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken
+        idToken: googleAuth.idToken,
       );
 
       final UserCredential userCredential = await _auth.signInWithCredential(credential);
@@ -27,12 +31,12 @@ class AuthService {
     }
   }
 
-  // sign out
+  // Sign out
   Future<void> logout() async {
     await _auth.signOut();
     await _googleSignIn.signOut();
   }
 
-  // get logged in user
+  // Get current user
   User? get currentUser => _auth.currentUser;
 }

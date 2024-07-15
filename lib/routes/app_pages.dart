@@ -12,7 +12,7 @@ import 'package:cyber_school/screens/login_screen.dart';
 import 'package:cyber_school/bindings/splash_binding.dart';
 
 import 'app_routes.dart';
-// import 'package:cyber_school/bindings/login_binding.dart';
+import 'package:cyber_school/bindings/auth_binding.dart';
 // import 'package:cyber_school/bindings/register_binding.dart';
 // import 'package:cyber_school/bindings/home_binding.dart';
 // import 'package:cyber_school/bindings/student_details_binding.dart';
@@ -25,7 +25,7 @@ import 'app_routes.dart';
 class AppPages {
   static final List<GetPage> pages = [
     GetPage(name: AppRoutes.SPLASH, page: () => const SplashScreen(), binding: SplashBinding()),
-    // GetPage(name: AppRoutes.LOGIN, page: () => LoginScreen(), binding: LoginBinding()),
+    GetPage(name: AppRoutes.LOGIN, page: () => const LoginScreen(), binding: AuthBindings()),
     // GetPage(name: AppRoutes.REGISTER, page: () => RegisterScreen(), binding: RegisterBinding()),
     // GetPage(name: AppRoutes.HOME, page: () => HomeScreen(), binding: HomeBinding()),
     // GetPage(name: AppRoutes.STUDENT_DETAILS, page: () => StudentDetailsScreen(), binding: StudentDetailsBinding()),
