@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "564259726242",
+    "project_id": "cyber-school-mobile",
+    "storage_bucket": "cyber-school-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564259726242:android:ee14252d0393ecb11dc8fb",
+        "android_client_info": {
+          "package_name": "com.github.iraqooh.cyber_school"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564259726242-q23cjrmrj4m9ok206ob651k72njvj5no.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXT2hNT2CPetSCI3rTadSlyLcnsiug30A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564259726242-q23cjrmrj4m9ok206ob651k72njvj5no.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "564259726242-3p0cqqv9j7n970vkt0kmqj0eju4otjr6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.github.iraqooh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
